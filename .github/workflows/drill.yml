@@ -1,0 +1,13 @@
+name: CI Triage Drill
+
+on:
+  workflow_dispatch:
+
+jobs:
+  drill-fail-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print drill marker
+        run: echo "DRILL-FAIL"
+      - name: Fail the build
+        run: exit 1
